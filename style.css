@@ -1,0 +1,1681 @@
+/*
+ Theme Name:   Greener Guest
+ Description:  Hello Child Theme
+ Author:       Digital Rockpool
+ Author URI:   https://digitalrockpool.com
+ Template:     hello-elementor
+ Version:      1.0.0
+ Text Domain:  hello-elementor
+*/
+
+/* # Table of Contents
+General
+	- Widgets
+		- Language Switcher
+LearnDash
+	- Course Progression Bar
+Marketplace / My Account Area
+	- Side Navigation
+	- Content
+		- Shipping
+Gravity Forms
+	- Resource Form
+Marketplace - WCFM
+
+*/
+
+/* elementor blog seperator */
+.elementor-post-navigation__separator-wrapper {
+	margin: 0 15px;
+}
+
+/* ## Conditional Naviagation Items
+------------------------------------------------------ */
+.menu-my-account-seller,
+.menu-my-account,
+.logged-in .menu-sign-in-register,
+.wcfm_vendor .menu-my-account,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--dashboard,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--orders,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--downloads,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--edit-address,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--edit-account,
+.wcfm_vendor .woocommerce-MyAccount-navigation-link--favourite-seller,
+.menu-sidebar-my-account {
+	display: none;
+}
+
+.wcfm_vendor .menu-my-account-seller,
+/* .administrator .menu-my-account-seller */
+.administrator .menu-my-account,
+.customer .menu-my-account {
+	display: inline-block;
+}
+
+.administrator .menu-sidebar-my-account,
+.customer .menu-sidebar-my-account {
+	display: block;
+}
+
+/* # General
+---------------------------------------------------------------------------------------------------- */
+p b,
+p strong,
+span b,
+span strong {
+	font-weight: 600;
+}
+
+ol li {
+	padding-bottom: 15px;
+}
+
+.breadcrumbs a {
+	color: #242424!important;
+}
+
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+	color: #0cb695!important;
+}
+
+
+/* ## Widgets
+------------------------------------------------------ */
+li.widget {
+	color: #242424;
+	font-size: 14px;
+	list-style: none;
+  margin: 0 0 3em;
+}
+
+li.widget a {
+	color: #242424;
+}
+
+.widget h2.widgettitle {
+	font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+/* ### Language Switcher
+------------------------------------------------------ */
+.elementor-widget-container .wpml-ls-legacy-dropdown {
+	font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+	width: auto;
+}
+
+.elementor-widget-container .wpml-ls-sidebars-language-switcher-sidebar .wpml-ls-sub-menu,
+.elementor-widget-container .wpml-ls-sidebars-language-switcher-sidebar a {
+	border-color: #ffffff;
+}
+
+.elementor-widget-container .wpml-ls-sidebars-language-switcher-sidebar a.wpml-ls-item-toggle {
+	border-color: #0cb695;
+}
+
+.elementor-widget-container .wpml-ls-legacy-dropdown .wpml-ls-item {
+	padding: 5px 0;
+}
+
+
+/* wordres editor overriding elementor */
+.mce-container button {
+	border: 1px solid transparent!important;
+	background-color: transparent!important;
+	color: #333333!important;
+	text-transform: none!important;
+}
+
+	/* *** Navigation - IS THIS STILL USED??? */
+	li.menu-item i {
+		margin-right: 15px;
+	}
+	.menu-top-bar li.menu-item i {
+		margin-right: 5px;
+	}
+
+	.menu-sign-in-register a {
+		color: #242424!important;
+	}
+
+	.menu-sign-in-register a:hover {
+		color: #0cb695!important;
+	}
+
+	/* bredcrumbs - IS THIS STILL USED??? */
+	.custom-breadcrumb .elementor-text-editor a {
+		color: #7f7f7f;
+	}
+	.custom-breadcrumb .elementor-text-editor a:hover {
+		color: #242424;
+	}
+
+
+/* ## Blogs	------------------------------------------------------ */
+.guest-author .regular-author,
+.guest-author-avatar,
+.guest-author-name,
+.guest-author-bio {
+	display: none;
+}
+
+.guest-author .guest-author-avatar,
+.guest-author .guest-author-name,
+.guest-author .guest-author-bio {
+	display: block;
+}
+
+	/* # Elementor
+	---------------------------------------------------------------------------------------------------- */
+
+	/* ## Forms
+	------------------------------------------------------ */
+	input[type=date],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=url],
+	select,
+	textarea,
+	.select2-container--default.select2-container--focus .select2-selection--multiple,
+	.select2-container.-acf .select2-selection {
+		border: 1px solid #ccd0d4!important;
+		border-radius: 5px!important;
+	}
+
+	.readonly input {
+		background: #ccd0d4!important;
+	}
+
+
+/* ## Custom Headers Tags - Change to a resources section
+------------------------------------------------------ */
+.single-resources h3 {
+	font-size: 20px!important;
+}
+
+
+/* # LearnDash
+---------------------------------------------------------------------------------------------------- */
+
+/* ## My Account - Course Profile
+------------------------------------------------------ */
+.learndash-wrapper .ld-profile-summary {
+	margin: 0;
+}
+
+.learndash-wrapper #ld-profile .ld-profile-summary .ld-profile-card .ld-profile-avatar,
+.learndash-wrapper .ld-profile-summary .ld-profile-card .ld-profile-heading,
+.learndash-wrapper .ld-profile-summary .ld-profile-card .ld-profile-edit-link {
+	display: none;
+}
+
+.learndash-wrapper .ld-profile-summary .ld-profile-stats .ld-profile-stat-points {
+	display: none;
+}
+
+.learndash-wrapper .ld-alert-certificate a.ld-button {
+	background-color: #ffa915!important
+}
+
+/* ## Course Info Bar (inc logged in and logged out states)
+------------------------------------------------------ */
+.enrolled-status {
+	display: none;
+}
+
+.logged-in .enrolled-status {
+	display: block;
+}
+
+.logged-in .not-enrolled-status {
+	display: none;
+}
+
+.learndash-wrapper .ld-alert.ld-alert-success.ld-alert-certificate a.ld-button,
+.learndash-wrapper .ld-course-status-content .ld-status {
+	background-color: #ffa915!important;
+	border: 1px solid #ffa915!important;
+}
+
+.learndash-wrapper .ld-course-status-content .ld-status,
+.learndash-wrapper #btn-join, .learndash-wrapper .btn-join {
+	border-radius: 5px;
+	line-height: 2;
+	padding: .5rem 1rem;
+}
+
+.learndash-wrapper .ld-course-status-label,
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-label {
+	color: #242424;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-price {
+	color: #242424;
+	font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+/* ## Course Content Table
+------------------------------------------------------ */
+.learndash-wrapper .ld-course-navigation .ld-course-navigation-heading {
+	display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.learndash-wrapper .ld-section-heading .ld-expand-button span {
+		color: #ffffff!important;
+}
+
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-title .ld-item-components {
+	color: #242424;
+	font-weight: 400;
+}
+
+.learndash-wrapper .ld-table-list .ld-table-list-header {
+	font-weight: 400;
+}
+
+/* ## Course Progression Bar
+------------------------------------------------------ */
+.learndash-wrapper .ld-progress .ld-progress-heading .ld-progress-stats .ld-progress-percentage {
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 1025px) {
+  .learndash-wrapper .ld-progress .ld-progress-heading .ld-progress-stats .ld-progress-percentage {
+        margin-right: 0.5em;
+  }
+}
+
+.section-top-progress .elementor-widget-wp-widget-ldcourseprogress {
+	background: #f0f3f6;
+  border-radius: 0 0 6px 6px;
+  padding: .5em 1em;
+}
+
+.section-top-progress .elementor-widget-wp-widget-ldcourseprogress div h5 {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	line-height: 1em;
+	position: absolute;
+}
+
+.section-top-progress .learndash-wrapper .ld-lesson-status .ld-breadcrumbs {
+	border-radius: 6px 6px 0 0;
+}
+
+.section-top-progress .learndash-wrapper .ld-progress {
+	margin: 0;
+}
+
+.section-top-progress .learndash-wrapper.learndash-widget .ld-progress .ld-progress-heading {
+	order: 1;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.section-top-progress .learndash-wrapper.learndash-widget .ld-progress .ld-progress-bar {
+	background-color: #ffffff;
+	height: 13px;
+	margin: 7px 0 13px;
+	order: 2;
+}
+
+.section-top-progress .learndash-wrapper .ld-progress .ld-progress-bar .ld-progress-bar-percentage {
+	height: 13px;
+}
+
+/* ## Section Content
+------------------------------------------------------ */
+.learndash-wrapper .ld-topic-list.ld-table-list .ld-table-list-lesson-details .ld-lesson-list-progress {
+	font-weight: 500;
+}
+
+.learndash-wrapper .ld-table-list-header {
+	background-color: #242424!important;
+}
+
+.learndash-wrapper .learndash_mark_complete_button {
+	background-color: #ffa915!important;
+	border-color: #ffa915!important;
+}
+
+/* ## Lesson Content
+------------------------------------------------------ */
+.learndash-wrapper .ld-button,
+.learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
+	background-color: #ccd0d4!important;
+	border: 1px solid #ccd0d4!important;
+	border-radius: 5px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.learndash-wrapper .ld-button:not(.ld-js-register-account):not(.learndash-link-previous-incomplete):not(.ld-button-transparent):not(.ld-alert-certificate .ld-button) {
+	background-color: #ccd0d4!important;
+	border: 1px solid #ccd0d4!important;
+}
+
+.learndash-wrapper .ld-content-actions .ld-content-action {
+	min-width: 215px;
+}
+
+.learndash-wrapper  .ld-progress-bar .ld-progress-bar-percentage {
+	background-color: #ffa915!important;
+}
+
+/* @media only screen and (max-width: 1025px) {
+  body {
+    background-color: i am a mobile style;
+  }
+} */
+
+.learndash-wrapper .ld-content-actions .ld-content-action .ld-course-step-back {
+    padding: 15px;
+}
+
+/* ## Lesson Infobar
+------------------------------------------------------ */
+
+.learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments span a {
+    font-weight: 400;
+}
+
+ .learndash-wrapper .ld-course-navigation .ld-lesson-item.ld-is-current-lesson .ld-lesson-title {
+     font-weight: 400;
+ }
+
+ .learndash-wrapper .ld-expand-button span {
+     color: #242424!important;
+     font-weight: 400;
+ }
+
+/* ## Quiz Answers
+------------------------------------------------------ */
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label.is-selected,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label:focus-within {
+	border-color: #e2e7ed;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerCorrect label,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerCorrectIncomplete label,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerCorrect>table,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerCorrect>table td {
+	background: rgba(12,182,49,0.3);
+	border: #0cb695;
+	color: #242424;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerIncorrect label,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerIncorrect>table,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerIncorrect>table td {
+	background: rgba(183,20,20,0.3);
+	border: #b71414;
+	color: #242424;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionList[data-type=assessment_answer] label {
+	color: #242424;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionList[data-type=assessment_answer] .wpProQuiz_questionListItem {
+	border: 0;
+	padding: 1em 0;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem {
+	align-items: stretch;
+}
+
+.learndash .wpProQuiz_content .wpProQuiz_questionListItem label {
+	background-color: #f0f3f6;
+  border-bottom: 2px solid #e2e7ed!important;
+  border-left: 1px solid #e2e7ed!important;
+  border-right: 1px solid #e2e7ed!important;
+  border-top: 2px solid #e2e7ed!important;
+  border-radius: 0;
+  padding: .5em 1em!important;
+  margin: 0!important;
+}
+
+.learndash .wpProQuiz_content .wpProQuiz_questionListItem label:first-child {
+	border-left: 2px solid #e2e7ed!important;
+	border-radius: 5px 0 0 5px;
+}
+
+.learndash .wpProQuiz_content .wpProQuiz_questionListItem label:last-child {
+	border-right: 2px solid #e2e7ed!important;
+	border-radius: 0 5px 5px 0;
+}
+
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_button,
+ .learndash-wrapper .wpProQuiz_content a#quiz_continue_link {
+	 border: 1px solid #ffffff !important;
+	 border-radius: 5px;
+	 font-size: 14px;
+	 font-weight: 500;
+	 letter-spacing: 0.5px;
+	 text-transform: uppercase;
+ }
+
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_mextrixTr>td {
+	 background: #ffffff;
+ }
+
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_response {
+	 color: #242424;
+	 text-align: left;
+ }
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_response p {
+	 margin-bottom: 15px;
+ }
+
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_response ul {
+	 margin-top: 15px;
+ }
+
+ .learndash-wrapper .wpProQuiz_content ul.wpProQuiz_maxtrixSortCriterion {
+	 height: 92px!important;
+ }
+
+ .learndash-wrapper .wpProQuiz_content .wpProQuiz_response li {
+	 margin-bottom: 5px;
+ }
+
+ .learndash-wrapper .wpProQuiz_content a#quiz_continue_link {
+	 background-color: #ffa915!important;
+ }
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_header {
+	font-weight: 500;
+ }
+
+.learndash-wrapper .ld-quiz-actions input[name=reShowQuestion],
+.learndash-wrapper .ld-quiz-actions input[name=restartQuiz] {
+	background-color: #ccd0d4!important;
+	color: #242424;
+}
+
+
+.learndash-wrapper .wpProQuiz_27 .wpProQuiz_response,
+.learndash-wrapper .graded-disclaimer {
+	display: none!important;
+}
+
+.learndash-wrapper p.wpProQuiz_clear {
+	margin: 0;
+}
+
+.learndash-wrapper .ld-alert-warning .ld-button {
+	background-color: #871414;
+  border-radius: 5px;
+  color: #242424;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+/* # Woocommerce
+---------------------------------------------------------------------------------------------------- */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover  {
+	background-color: #0cb695;
+	border-radius: 5px;
+	color: #ffffff!important;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	padding: 12px 24px!important;
+	text-transform: uppercase;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #009578;
+}
+
+/* ## Woocommerce Messages
+------------------------------------------------------ */
+
+.woocommerce-error {
+    background-color: #f0f3f6;
+	border-color: #ffa915;
+}
+
+.woocommerce-info {
+    background-color: #f0f3f6;
+	border-color: #ffa915;
+}
+
+.woocommerce-message {
+	background-color: #f0f3f6;
+	border-color: #ffa915;
+}
+
+.woocommerce-message::before {
+	color: #0cb695;
+}
+
+body.single-product .woocommerce-message .message-inner {
+    background-color: #f0f3f6;
+	border-color: #ffa915;
+}
+
+/* ## Cart (Basket)
+------------------------------------------------------ */
+.product-coming-soon .add-to-basket,
+.coming-soon {
+	display: none;
+}
+
+.product-coming-soon .coming-soon {
+	display: block;
+}
+
+.woocommerce table.shop_table,
+.woocommerce-cart .cart-collaterals .cart_totals table {
+	border-collapse: collapse;
+}
+
+.woocommerce table.shop_table,
+.woocommerce table.shop_table th {
+	border: none!important;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
+	background-color: #ffffff!important;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.woocommerce-cart .cart-collaterals .cart_totals tr td {
+	border: none;
+}
+
+.woocommerce table.shop_table tr:first-child {
+	border-top: none;
+}
+
+.woocommerce table.shop_table thead,
+.woocommerce table.shop_table tr,
+.woocommerce table.shop_table tr:first-child {
+	border-bottom: 1px solid #ccd0d4;
+}
+
+.woocommerce table.shop_table tr:last-child {
+	border-bottom: none;
+}
+
+.woocommerce table.shop_table td {
+	background-color: #ffffff!important;
+	border: none;
+}
+
+.woocommerce table.shop_table td a {
+	color: #242424;
+}
+
+.woocommerce table.shop_table td a.shipping-calculator-button {
+	color: #0cb695;
+}
+
+.woocommerce table.shop_table td a:hover {
+	color: #0cb695;
+}
+
+.woocommerce table.shop_table a.remove {
+	color: #242424!important;
+	font-weight: 500;
+}
+
+.woocommerce table.shop_table a:hover {
+	background-color: #ffffff;
+}
+
+.woocommerce table.shop_table img {
+	width: 100px;
+}
+
+.woocommerce table.shop_table .quantity .qty {
+	min-width: 120px;
+	text-align: left!important;
+}
+
+/* ## Product Archive (Marketplace)
+------------------------------------------------------ */
+.woocommerce .woocommerce-ordering select {
+	border: none;
+  border-bottom: 2px solid #ccd0d4;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.woocommerce .woocommerce-result-count {
+	font-size: 14px;
+	margin: 0.7em 0 1em;
+}
+
+.filter-column .woocommerce h5,
+.filter-column .woocommerce li,
+.filter-column .woocommerce a,
+.filter-column .woocommerce a:hover {
+	color: #242424;
+	font-size: 14px;
+}
+
+.woocommerce li.product {
+	text-align: center;
+}
+
+.woocommerce .product-unit-price {
+	font-size: 14px;
+}
+
+.woocommerce .pa-description,
+.woocommerce .product-pack-of,
+.woocommerce .product-unit-price {
+	color: #242424;
+}
+
+.woocommerce ul.products li.product .price {
+	margin-bottom: 0;
+}
+
+.woocommerce .elementor-widget-woocommerce-product-content ul,
+.woocommerce table.product-tabs ul,
+div.product ul {
+  list-style: none;
+  padding: 0;
+}
+
+div.product ul {
+	margin-bottom: 1em;
+}
+
+.woocommerce .elementor-widget-woocommerce-product-content li,
+.woocommerce table.product-tabs li,
+div.product li {
+  padding-left: 1.3em;
+	margin-bottom: 0.5em;
+}
+
+.woocommerce .elementor-widget-woocommerce-product-content li:before,
+.woocommerce table.product-tabs li:before
+/* div.product li:before */ {
+	content: "\f054";
+  font-family: "Font Awesome 5 Pro";
+	font-size: 12px;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+/* ## Single Product
+------------------------------------------------------ */
+.woocommerce div.product.elementor h2,
+.woocommerce div.product.elementor h3 {
+	font-size: 20px;
+}
+
+.woocommerce div.product.elementor .product-vat {
+	font-size: 16px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+.woocommerce div.product.elementor .quantity .qty {
+	height: 39px;
+	min-width: 120px;
+}
+
+.woocommerce div.product form.cart .button,
+.woocommerce div.product form.cart .woo-quanitiy-plus,
+.woocommerce div.product form.cart .woo-quanitiy-minus,
+.woocommerce div.product.elementor .woocommerce-variation-add-to-cart .quantity input {
+	height: 39px!important;
+}
+
+.woocommerce div.product form.cart,
+.woocommerce div.product form.cart .variations {
+	margin-bottom: 8px;
+}
+
+.woocommerce div.product form.cart .variations .label {
+	width: 30%;
+}
+
+.woocommerce div.product form.cart .variations label {
+	font-weight: 500;
+
+}
+
+.woocommerce div.product form.cart .variations select {
+	border-color: #ccd0d4;
+	font-size: 14px;
+  font-weight: 300;
+}
+
+.woocommerce div.product form.cart .variations td {
+	background-color: #ffffff!important;
+	border: none;
+	display: flex;
+	padding: 3px 0;
+}
+
+.woocommerce div.product .single_variation_wrap .woocommerce-variation-price .price,
+.woocommerce div.product p.price ins,
+.woocommerce div.product span.price ins {
+	color: #0cb695;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.woocommerce ul.products li.product .price ins,
+.woocommerce-page ul.products li.product .price ins,
+.woocommerce div.product span.price ins,
+.woocommerce div.product p.price ins,
+.woocommerce #content div.product span.price ins,
+.woocommerce #content div.product p.price ins,
+.woocommerce-page div.product span.price ins,
+.woocommerce-page div.product p.price ins,
+.woocommerce-page #content div.product span.price ins,
+.woocommerce-page #content div.product p.price ins,
+.product-price ins,
+.woocommerce ul.cart_list li .quantity ins,
+.woocommerce-page ul.cart_list li .quantity ins,
+.woocommerce ul.product_list_widget li .quantity ins,
+.woocommerce-page ul.product_list_widget li .quantity ins {
+	text-decoration: none;
+}
+
+.woocommerce div.product.elementor form.cart:not(.grouped_form):not(.variations_form) {
+	flex-wrap: wrap!important;
+}
+
+/* woocommerce div.product.elementor form.cart .price-rules-table-wrapper {
+	order: 1;
+	margin: 0 0 0 5px;
+	width: 100%;
+}
+
+.woocommerce div.product.elementor form.cart .quantity {
+	order: 3;
+}
+
+.woocommerce div.product.elementor form.cart .single_add_to_cart_button {
+	order: 4;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table {
+	order: 2;
+	width: 100%;
+} */
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table {
+	margin: 0 20px;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__top {
+	border-top: 0;
+	font-weight: 500;
+}
+
+.woocommerce div.product.elementor .price-rules-table-wrapper .price-rule-active td,
+.woocommerce div.product.elementor .price-rules-table-wrapper .price-rule-active,
+.woocommerce div.product.elementor .price-rules-table-wrapper .amount {
+	color: #333;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__top div,
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__top span {
+	padding-right: 5px;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__bottom {
+	color: #0cb695;
+	font-size: 22px!important;
+	font-weight: 500;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__bottom div {
+	display: none;
+}
+
+.woocommerce div.product.elementor form.cart .tier-pricing-summary-table .tier-pricing-summary-table__bottom .tier-pricing-summary-table__total {
+	display: block;
+	font-size: 22px;
+	margin-left: 0;
+}
+
+.elementor-widget-woocommerce-product-meta .detail-label {
+	font-weight: 500!important;
+}
+
+/* ### Single Product - Additional Information
+------------------------------------------------------ */
+.woocommerce div.product table.shop_attributes {
+	border-top: 0;
+}
+
+.woocommerce div.product table.shop_attributes th.woocommerce-product-attributes-item__label {
+	border-bottom: 0;
+	font-weight: 500;
+	text-align: left;
+	white-space: nowrap;
+	width: auto;
+}
+
+.woocommerce div.product table.shop_attributes td.woocommerce-product-attributes-item__value {
+	border-bottom: 0;
+	font-style: normal;
+}
+
+.woocommerce div.product table.shop_attributes tr:nth-child(even) td,
+.woocommerce div.product table.shop_attributes tr:nth-child(even) th,
+.woocommerce div.product table.shop_attributes tr:nth-child(odd) td,
+.woocommerce div.product table.shop_attributes tr:nth-child(odd) th {
+	background: transparent;
+	border: 0;
+}
+
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--attribute_pa_country-of-origin,
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--weight,
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--dimensions,
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--attribute_pa_standards-certifications,
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--attribute_pa_packaging-disposal,
+.woocommerce div.product table.shop_attributes tr.woocommerce-product-attributes-item--attribute_pa_product-disposal {
+	display: none;
+}
+
+/* ## Single Product - Quantity
+-------------------------------------------- */
+/* Remove arrows in number inputs - Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in number inputs - Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.woocommerce div.product form.cart div.quantity {
+  margin: 0;
+}
+
+.woocommerce div.product form.cart div.quantity .qty {
+  border-left: 0!important;
+  border-right: 0!important;
+  border-radius: 0!important;
+  min-width: 150px;
+}
+
+.woocommerce .cart button.woo-quanitiy-minus,
+.woocommerce .cart button.woo-quanitiy-minus:hover  {
+  border-right: 0;
+  border-radius: 5px 0 0 5px!important;
+  padding: 0 8px;
+}
+
+.woocommerce .cart button.woo-quanitiy-plus,
+.woocommerce .cart button.woo-quanitiy-plus:hover  {
+  border-left: 0;
+  border-radius: 0 5px 5px 0!important;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
+/* ### Single Product - Tabs
+------------------------------------------------------ */
+.product-tabs td.td-title {
+	width: 20%;
+}
+
+.product-tabs td {
+	background-color: #ffffff!important;
+	border: none;
+	font-size: 16px;
+}
+
+.product-tabs tr {
+	border-bottom: 1px solid #ccd0d4;
+}
+
+.product-tabs tr:last-child {
+	border-bottom: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	color: #242424!important;
+  border-top: 2px solid #0cb695;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+	color: #242424!important;
+}
+
+.woocommerce div.product .woocommerce-tabs .impact-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.woocommerce div.product .woocommerce-tabs .impact-story,
+.woocommerce div.product .woocommerce-tabs .impact-image {
+	width: 48%;
+}
+
+
+/* ## My Account
+------------------------------------------------------ */
+.woocommerce #customer_login .u-column2 {
+	display: none;
+}
+
+/* # Marketplace / My Account Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Side Navigation (currently not in use)
+------------------------------------------------------ */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+	display: none;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+	list-style: none;
+	padding: 0 0 0 5px;
+	margin-right: 15px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li:hover {
+	background-color: #e8e8e8;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+	color: #2f2f2f;
+	font-size: 14px;
+  font-weight: 500;
+	line-height: 40px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a:before {
+	padding-right: 8px;
+	vertical-align: bottom;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--tax a:before {
+    content: "\e925";
+    font-family: 'Webkul Rango';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--sellernotification a:after {
+	background-color: #ffa915;
+	border-radius: 100%;
+	font-size: 10px;
+	font-weight: 500;
+	margin-left: 0px;
+	padding: 0 5px;
+	vertical-align: top;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--sellerask-a-question {
+	margin-bottom: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 20px;
+    font-weight: 900;
+		content: "\f2f5";
+    text-align: center;
+}
+
+/* ## Content
+------------------------------------------------------ */
+.woocommerce-account .woocommerce-MyAccount-content {
+	width: 100%;
+}
+
+/* ### Forms --------------------- */
+.wkmp_container .wkmp_profile_input label {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 2em;
+	margin-bottom: 0;
+}
+
+/* ### Tables --------------------- */
+.woocommerce-MyAccount-content table thead:first-child tr:first-child th {
+	border-top: none;
+}
+
+.woocommerce-MyAccount-content table tbody>tr:nth-child(odd)>td, table tbody>tr:nth-child(odd)>th {
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+.woocommerce-MyAccount-content th,
+.woocommerce-MyAccount-content table thead:first-child tr:first-child th {
+	border: 1px solid #ffffff;
+	border-bottom: 1px solid #0cb695;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: left;
+}
+
+.woocommerce-MyAccount-content table tbody+tbody {
+	border-top: 1px solid #ccd0d4;
+}
+
+.woocommerce-MyAccount-content td {
+	font-size: 14px;
+}
+
+.woocommerce-MyAccount-content .wkmp-action-div a.add-product,
+.woocommerce-MyAccount-content .new-ship-zone a {
+	background: #0cb695;
+	border: 1px solid #0cb695;
+	border-radius: 5px 5px 5px 5px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	padding: .5rem 1rem;
+	text-transform: uppercase;
+}
+
+.woocommerce-MyAccount-content .wkmp-action-div a:hover.add-product,
+.woocommerce-MyAccount-content .new-ship-zone a:hover {
+	background: #009578;
+	border: 1px solid #009578;
+	color: #ffffff;
+}
+
+/* ### Product List --------------------- */
+.woocommerce-MyAccount-content .wkmp-action-div input[type="text"] {
+	width: 75%;
+}
+
+.woocommerce-MyAccount-content .wkmp-action-div input[type="submit"] {
+	background-color: #e8e8e8;
+	border: 1px solid #e8e8e8;
+	color: #242424;
+}
+
+.woocommerce-MyAccount-content .wkmp-action-div input[type="submit"]:hover {
+	background-color: #ccd0d4;
+	border: 1px solid #ccd0d4;
+	color: #242424;
+}
+
+.woocommerce-MyAccount-content .wkmp-action-div button#wkmp-bulk-delete {
+	background-color: #ffffff;
+	border: none;
+	color: #f81122;
+}
+
+/* ### Shipping --------------------- */
+.woocommerce-MyAccount-content .new-ship-zone {
+	float: right;
+}
+
+.woocommerce-MyAccount-content .new-ship-zone a {
+	margin: 0;
+}
+
+.wc-shipping-zones-list td p {
+	font-size: 14px;
+}
+
+.woocommerce-MyAccount-content .mp_ship_tags {
+	background: #e8e8e8;
+	border: 1px solid #e8e8e8;
+	box-shadow: none;
+}
+
+/* ### Manage Product --------------------- */
+#add-new-product-header-btn {
+	display: none;
+}
+
+.page-id-28192 #add-new-product-header-btn {
+	display: inline-block;
+}
+
+/* ### Add Product --------------------- */
+.acfef-tabs-wrapper .form-tab.active {
+	border-bottom: 3px solid #ffa915
+}
+
+.acf-taxonomy-field input.select2-search__field {
+		border: none!important;
+}
+
+.acf-taxonomy-field .acf-actions.-hover {
+	display: block!important;
+}
+
+table.acf-table,
+table.acf-table thead:first-child tr:first-child th {
+	border: 1px solid #ffffff;
+}
+
+table.acf-table tbody>tr:nth-child(odd)>td {
+	background-color: #ffffff;
+}
+
+.acf-table>tbody>tr>td,
+.acf-table>thead>tr>th,
+.acf-table>thead>tr>td {
+	padding: 0 3px 0 0!important;
+}
+
+table.acf-table .acf-input-prepend {
+	border: 1px solid #ccd0d4;
+	border-right: none;
+	min-height: 29px;
+}
+
+table.acf-table .acf-input-append {
+	border: 1px solid #ccd0d4;
+	border-left: none;
+	min-height: 29px;
+}
+
+.acf-fields div.acf-bordered-box {
+	border-top: 1px solid #ccd0d4!important;
+	margin-top: 30px;
+}
+
+.acf-fields div.acf-hide-group-label .acf-label {
+	display: none;
+}
+
+.acf-fields div.acf-hide-group-label .acf-label,
+.acf-fields div.acf-message-with-icon .acf-label,
+.acf-fields div.acf-hide-group-label  div.acf-hide-group-label .acf-label {
+	display: none;
+}
+
+.acf-fields div.acf-hide-group-label .acf-table .acf-label {
+	display: inline-block;
+}
+
+.acf-button {
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.acf-button::before {
+	content: "\f055";
+  font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.acf-message-with-icon::before {
+	color: #ffa915;
+	content: "\f059";
+  font-family: "Font Awesome 5 Duotone";
+  font-size: 28px;
+	font-weight: 900;
+	float: left;
+}
+
+.acf-message-with-icon .acf-input {
+	margin-left: 40px;
+}
+
+.elementor-27971 .elementor-element.elementor-element-bce9bc1 .acfef-submit-buttons {
+	margin-top: 30px;
+}
+
+/* # Gravity Forms
+---------------------------------------------------------------------------------------------------- */
+.gform_wrapper .update-message {
+	background: #e6fdf9;
+	border-top: 2px solid #0cb695;
+  color: #0e7762;
+  font-weight: 500;
+  padding: 5px 10px!important;
+}
+
+.gform_wrapper .gsection h2.gsection_title {
+	padding-top: 30px!important;
+}
+
+.gform_wrapper .gform_body ul.gform_fields li.no-padding {
+	padding-top: 0!important;
+}
+
+.gform_wrapper .gsection .gfield_label,
+.gform_wrapper h2.gsection_title,
+.gform_wrapper h3.gform_title,
+.gform_wrapper label.gfield_label {
+	font-weight: 500!important;
+}
+
+.gform_wrapper .field_sublabel_below label {
+	font-weight: 300;
+}
+
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.gform_wrapper .field_description_below .gfield_description {
+	letter-spacing: 0!important;
+	line-height: 1!important;
+	padding: 0px!important;
+	margin: 3px 0 9px 5px!important;
+}
+
+.gform_wrapper .field_description_below .gfield_consent_description,
+.gform_wrapper .gfield_consent_description {
+	border: none!important;
+	font-size: .813em!important;
+	letter-spacing: 0!important;
+	line-height: 1.3!important;
+	padding: 0px!important;
+	margin: 3px 0 9px 0!important;
+}
+
+.gform_wrapper ul.gform_fields li.gfield input,
+.gform_wrapper ul.gform_fields li.gfield textarea  {
+	font-size: 14px!important;
+  font-weight: 300;
+	letter-spacing: 1px!important;
+}
+
+.gform_wrapper ul.gform_fields li.gfield select,
+.gform_wrapper .chosen-container-multi .chosen-choices {
+	background-image: none!important;
+	border: 1px solid #ccd0d4!important;
+  border-color: #ccd0d4;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 5px 5px 5px 5px;
+	color: #333333;
+	font-size: 14px!important;
+	font-weight: 300;
+	padding: 5px 4px!important;
+}
+
+.gform_wrapper .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+	color: #333333!important;
+}
+
+.gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked+label,
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
+	font-weight: 500!important;
+}
+
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+	margin-top: 0px!important;
+}
+
+.gform_wrapper li.gf_list_inline ul.gfield_radio li {
+	margin-bottom: 0!important;
+}
+
+.ginput_container_password span.ginput_left button,
+.ginput_container_password span.ginput_left button:hover,
+.ginput_container_password span.ginput_right button,
+.ginput_container_password span.ginput_right button:hover {
+	background: none;
+	border: none;
+	color: #333333;
+}
+
+.gform_wrapper #gfield_description_3_18 {
+	padding-bottom: 10px!important;
+}
+
+/* .gform_wrapper li.hidden_label input {
+	margin: 12px 12px 0 5px!important;
+} */
+
+.footer-email-signup .gform_wrapper input[type=text] {
+	border: 1px solid #242424;
+	line-height: 1.75;
+	min-width: 350px;
+	padding: .5rem 1rem!important;
+}
+
+.footer-email-signup .gform_wrapper input[type=submit] {
+	background-color: #ffa915;
+	border: 1px solid #ffa915;
+}
+
+.footer-email-signup .gform_wrapper input:hover[type=submit] {
+	background-color: #d08300;
+	border: 1px solid #d08300;
+}
+
+.footer-email-signup .gform_wrapper li.hidden_label input {
+	margin: 0!important;
+}
+
+.mce-panel {
+	border: none!important;
+}
+
+/* ## Resource Form
+------------------------------------------------------ */
+.resource-form {
+	color: #fff;
+}
+
+.resource-form input[type="checkbox"] {
+  height: 20px;
+	margin-right: 5px;
+	width: 20px;
+}
+
+.resource-form input[type="submit"] {
+	background-color: #ffa915!important;
+	border-color: #ffa915!important;
+  width: 100%;
+}
+
+.resource-form input[type="submit"]:hover {
+	background-color: #d08300!important;
+	border-color: #d08300!important;
+}
+
+.resource-form label {
+	line-height: 1.1!important;
+}
+
+.download-thanks .resource-form,
+.logged-in .resource-form,
+.resource-form-success-msg,
+.resource-form-success {
+	display: none;
+}
+
+.download-thanks .resource-form-success,
+.download-thanks .resource-form-success-msg,
+.logged-in .resource-form-success {
+	display: inline-block;
+}
+
+
+/* # Marketplace
+---------------------------------------------------------------------------------------------------- */
+/* my-marketplace > store setup */
+body.wcfm-store-setup {
+	color: #242424;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.wcfm-store-setup #wc-logo a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0 15px;
+}
+
+.wcfm-store-setup #wc-logo a span {
+	font-weight: 400;
+	font-size: 36px;
+	padding: 0;
+}
+
+.wcfm-store-setup .wc-setup-content h1,
+.wcfm-store-setup .wc-return-to-dashboard {
+	display: none;
+}
+
+.wc-setup-content .form-table td {
+	vertical-align: middle;
+}
+
+.wcfm-store-setup p {
+	color: #242424;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.wcfm-store-setup ul,
+.wcfm-store-setup li {
+	font-size: 14px;
+}
+
+.wcfm-store-setup .wc-setup-content .form-table td .description {
+	color: #242424;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.wcfm-store-setup .wc-setup-content input[type="text"],
+.wcfm-store-setup .wc-setup-content input[type="password"],
+.wcfm-store-setup .wc-setup-content select,
+.wcfm-store-setup .wc-setup-content input[type="number"],
+.wcfm-store-setup .wc-setup-content input[type="time"],
+.wcfm-store-setup .wc-setup-content input[type="search"],
+.wcfm-store-setup .wc-setup-content textarea,
+.wcfm-store-setup .wc-setup-content .select2-container {
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.wcfm-store-setup .wc-setup-content .social_policy,
+.wcfm-store-setup .wc-setup-content #wp-social_policy-wrap {
+	display: none!important;
+}
+
+
+div.wcfm-collapse-content h2 {
+	font-style: normal!important;
+	font-weight: 500!important;
+}
+
+.wcfm-container p.wcfm_title strong,
+.wcfm-container span.wcfm_title strong {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500!important;
+}
+
+.wcfm-container .store_address p.wcfm_title,
+#wcfm_profile_address_expander p.wcfm_title {
+	margin-left: 0!important;
+}
+
+.wc-setup .wc-setup-actions .button {
+	background: #ccd0d4;
+	border: 1px solid #ccd0d4;
+	color: #242424;
+	box-shadow: none!important;
+	font-size: 14px!important;
+  font-weight: 500!important;
+	letter-spacing: 0.5px;
+	text-shadow: none!important;
+	text-transform: uppercase;
+}
+
+.wc-setup .wc-setup-actions .button:hover {
+	background: #9ea8b1;
+	border: 1px solid #9ea8b1;
+}
+
+.wcfm-store-setup .wc-setup-actions .wcfm_submit_button,
+#wcfm-main-contentainer input.wcfm_submit_button,
+#wcfm-main-contentainer button.wcfm_submit_button,
+#wcfm-main-contentainer a.wcfm_submit_button,
+#wcfm-main-contentainer .wcfm_add_category_bt,
+#wcfm-main-contentainer .wcfm_add_attribute,
+#wcfm-main-contentainer .wcfm_add_attribute_term,
+#wcfm-main-contentainer input.upload_button,
+#wcfm-main-contentainer input.remove_button,
+#wcfm-main-contentainer .dataTables_wrapper .dt-buttons .dt-button,
+#wcfm_vendor_approval_response_button,
+#wcfm_bulk_edit_button,
+#wcfm_enquiry_submit_button {
+	background: #0cb695!important;
+	border: 1px solid #0cb695!important;
+	box-shadow: none!important;
+	color: #ffffff;
+	font-size: 14px!important;
+  font-weight: 500!important;
+	letter-spacing: 0.5px;
+	text-shadow: none!important;
+	text-transform: uppercase;
+}
+
+.wcfm-store-setup .wc-setup-actions .wcfm_submit_button:active,
+.wcfm-store-setup .wc-setup-actions .wcfm_submit_button:focus,
+.wcfm-store-setup .wc-setup-actions .wcfm_submit_button:hover,
+#wcfm-main-contentainer input.wcfm_submit_button:hover,
+#wcfm-main-contentainer button.wcfm_submit_button:hover,
+#wcfm-main-contentainer a.wcfm_submit_button:hover,
+#wcfm-main-contentainer .wcfm_add_category_bt:hover,
+#wcfm-main-contentainer .wcfm_add_attribute:hover,
+#wcfm-main-contentainer .wcfm_add_attribute_term:hover,
+#wcfm-main-contentainer input.upload_button:hover,
+#wcfm-main-contentainer input.remove_button:hover,
+#wcfm-main-contentainer .dataTables_wrapper .dt-buttons .dt-button:hover,
+#wcfm_vendor_approval_response_button:hover,
+#wcfm_bulk_edit_button:hover,
+#wcfm_enquiry_submit_button:hover {
+	background: #009578!important;
+	border: 1px solid #009578!important;
+}
+
+/* my-marketplace > profile > personal */
+#wcfm_profile_personal_expander p.locale,
+#wcfm_profile_personal_expander #locale {
+	display: none!important;
+}
+
+/* my-marketplace > profile > address */
+#wcfm_profile_address_expander .wcfm_profile_heading h3,
+#wcfm_profile_address_expander .same_as_billing,
+#wcfm_profile_address_expander #same_as_billing {
+	display: none!important;
+}
+
+/* my-marketplace > settings > marketplace */
+#wcfm_settings_form_store_expander .wcfm_vendor_settings_heading h2,
+#wcfm_settings_form_store_expander #store_email,
+#wcfm_settings_form_store_expander p.store_email {
+	display: none!important;
+}
+
+/* my-marketplace > settings > policies */
+#wcfm_settings_form_policies_expander h2 {
+	display: none!important;
+}
+
+#wcfm_products_manage_form_policies_expander .wcfm_policy_tab_title,
+#wcfm_products_manage_form_policies_expander #wcfm_policy_tab_title {
+	display: none;
+}
+
+/* my-marketplace > settings > shipstation */
+#wcfm_settings_form_shipstation_expander h2 {
+	display: none!important;
+}
+
+/* my-marketplace > settings > invoice */
+#wcfm_settings_form_vendor_invoice_expander .wcfm_vendor_invoice_disclaimer,
+#wcfm_settings_form_vendor_invoice_expander #wcfm_vendor_invoice_disclaimer,
+#wcfm_settings_form_vendor_invoice_expander .wcfm_vendor_invoice_signature,
+#wcfm_settings_form_vendor_invoice_expander .wcfm-wp-fields-uploader {
+	display: none!important;
+}
+
+/* my-marketplace > products */
+#wcfm-main-contentainer #wcfm_products_manage_form .catalog_visibility,
+#wcfm-main-contentainer #wcfm_products_manage_form #catalog_visibility,
+#wcfm-main-contentainer #wcfm_products_manage_form .product_translations,
+#wcfm-main-contentainer #wcfm_products_manage_form table>tbody#wcfm_product_translations {
+	display: none!important;
+}
+
+/* my-marketplace > products > attributes */
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_country-of-origin_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_1,
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_customisable_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_2,
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_packaging-disposal_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_3,
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_product-disposal_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_4,
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_raw-materials_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_5,
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_standards-certifications_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_6
+#wcfm_products_manage_form_attribute_expander .select_attributes_pa_shipped-to_is_visible_0,
+#wcfm_products_manage_form_attribute_expander #attributes_is_visible_7 {
+	display: none;
+}
+
+/* my-marketplace > products > product specification */
+#wcfm_products_manage_form_product-specification_expander p.user_guidance,
+#wcfm_products_manage_form_product-specification_expander p.ink_details,
+#wcfm_products_manage_form_product-specification_expander p.environmental_impact,
+#wcfm_products_manage_form_product-specification_expander p.product_disposal_description,
+#wcfm_products_manage_form_product-specification_expander p.packaging_disposal_description {
+	width: 100%;
+}
